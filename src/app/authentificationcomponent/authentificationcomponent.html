@@ -1,1 +1,39 @@
-<p>authentificationcomponent works!</p>
+<div style="max-width: 400px; margin: 60px auto; padding: 30px; background: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); border-radius: 12px; text-align: center; font-family: Arial, sans-serif;">
+  <h2 style="color: #3b82f6; margin-bottom: 20px; font-size: 22px;">🔥 Test Firebase Auth</h2>
+  
+  <input [(ngModel)]="email" placeholder="Email" 
+    style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; transition: border 0.3s;"
+    onfocus="this.style.border='1px solid #3b82f6'" 
+    onblur="this.style.border='1px solid #ccc'"
+  />
+
+  <input [(ngModel)]="password" type="password" placeholder="Mot de passe"
+    style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; transition: border 0.3s;"
+    onfocus="this.style.border='1px solid #3b82f6'" 
+    onblur="this.style.border='1px solid #ccc'"
+  />
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <button (click)="register()" 
+      style="background-color: #3b82f6; color: white; padding: 10px; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.3s;">
+      S'inscrire
+    </button>
+
+    <button (click)="login()" 
+      style="background-color: #10b981; color: white; padding: 10px; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.3s;">
+      Se connecter
+    </button>
+
+    <button (click)="logout()" 
+      style="background-color: #ef4444; color: white; padding: 10px; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.3s;">
+      Se déconnecter
+    </button>
+  </div>
+
+  @if(message){
+        <p style="color: #10b981; margin-top: 15px; font-weight: bold;">
+    {{ message }}
+  </p>
+  }
+</div>
+
