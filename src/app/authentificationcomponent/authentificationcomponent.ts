@@ -17,7 +17,7 @@ export class Authentificationcomponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.dataservice.EcrireDocument()
+    
       
   } 
  email = '';
@@ -30,7 +30,7 @@ export class Authentificationcomponent implements OnInit{
     try {
       await this.authService.register(this.email, this.password);
       this.message = 'Inscription réussie ✅';
-      this.router.navigate(['accueil'])
+      this.router.navigate(['/accueil'])
     } catch (error: any) {
       this.message = 'Erreur : ' + error.message;
     }

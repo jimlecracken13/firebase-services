@@ -3,6 +3,7 @@ import { Authentificationcomponent } from './authentificationcomponent/authentif
 import { Accueilcomponent } from './accueilcomponent/accueilcomponent';
 
 export const routes: Routes = [
-    {path:'', component:Authentificationcomponent},
+    {path:'', component:Authentificationcomponent,},
+    {path:'accueil', component:Accueilcomponent},
     
 ];

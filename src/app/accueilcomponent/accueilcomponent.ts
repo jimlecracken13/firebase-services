@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Data } from '../services/data';
 
 @Component({
   selector: 'app-accueilcomponent',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './accueilcomponent.css'
 })
 export class Accueilcomponent {
+  //injection de dépendances
+  dataservice:Data = inject(Data)
+
+  ajouter(){
+    this.dataservice.EcrireDocument()
+  }
+  afficher(){
+    this.dataservice.LireDocument()
+  }
           
 }
