@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "jimlecracken-dashboard",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

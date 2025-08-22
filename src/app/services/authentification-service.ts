@@ -9,7 +9,6 @@ export class AuthentificationService {
     constructor(private auth: Auth) {}
 
   register(email: string, password: string) {
-    
     return createUserWithEmailAndPassword(this.auth, email, password);
   }
 

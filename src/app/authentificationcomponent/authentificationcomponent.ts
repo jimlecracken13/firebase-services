@@ -29,7 +29,7 @@ export class Authentificationcomponent implements OnInit{
   async register() {
     try {
       await this.authService.register(this.email, this.password);
-      this.message = 'Inscription réussie ✅';
+      this.message = 'Inscription réussie';
       this.router.navigate(['/accueil'])
     } catch (error: any) {
       this.message = 'Erreur : ' + error.message;
@@ -39,7 +39,7 @@ export class Authentificationcomponent implements OnInit{
   async login() {
     try {
       await this.authService.login(this.email, this.password);
-      this.message = 'Connexion réussie ✅';
+      this.message = 'Connexion réussie';
     } catch (error: any) {
       this.message = 'Erreur : ' + error.message;
     }
@@ -48,7 +48,7 @@ export class Authentificationcomponent implements OnInit{
   async logout() {
     try {
       await this.authService.logout();
-      this.message = 'Déconnexion réussie ✅';
+      this.message = 'Déconnexion réussie ';
     } catch (error: any) {
       this.message = 'Erreur : ' + error.message;
     }
